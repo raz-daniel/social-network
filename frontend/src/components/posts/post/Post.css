@@ -1,0 +1,42 @@
+.Post {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    margin: 4px;    
+}
+
+.Post button {
+    background-color: lightblue;
+    margin: 10px, 20px ;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+.Post button:hover {
+    cursor: pointer;
+}
+
+.Post .info {
+    font-size: x-small;
+}
+
+.Post div:last-child {
+    margin-top: 10px;
+}
+
+.Post span {
+    margin-left: 5px;
+    font-size: larger;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+
+.Post .firstPart {
+    background-color: rgb(195, 243, 195);
+    margin-bottom: 10px;
+}
+
+.Post img {
+    height: 300px;
+}

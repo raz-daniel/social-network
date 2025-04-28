@@ -1,0 +1,10 @@
+.Following {
+    height: 100%;
+}
+
+.Following h3 {
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,11 @@
+.Comment div:nth-child(0) {
+    font-size: x-small;
+}
+
+.Comment div:nth-child(1) {
+    font-size: x-small;
+}
+
+.Comment {
+    background-color: rgb(249, 207, 207);
+}

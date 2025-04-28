@@ -1,0 +1,15 @@
+.Follow {
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed lightgray;
+}
+
+.Follow img {
+    width: 32px;
+}
+
+.Follow button {
+    background-color: lightgreen;
+    border-radius: 5px;
+    
+}

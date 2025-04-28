@@ -1,0 +1,13 @@
+{
+    "app": {
+        "port": "3005",
+        "name": "QA",
+        "sequelizeLogging": false
+    },
+    "sequelize": {
+        "logging": false,
+        "sync": {
+            "force": false
+        }
+    }
+}

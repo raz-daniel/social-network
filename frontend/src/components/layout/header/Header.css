@@ -1,0 +1,30 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+
+.Header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10vh;
+}
+
+.Header .active {
+    color: green;
+    background: rgb(234, 238, 250);
+    border-radius: 2px;
+}
+
+.Header button {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+.Header button:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.Followers {
+    height: 100%;
+}
+
+.Followers h3 {
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}

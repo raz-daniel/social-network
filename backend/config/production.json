@@ -1,0 +1,29 @@
+{
+    "app": {
+        "port": "3000",
+        "name": "Production"
+    },
+    "sequelize": {
+        "logging": false,
+        "sync": {
+            "force": false
+        }
+    },
+    "s3": {
+        "isLocalstack": false,
+        "connection": {
+            "forcePathStyle": true,
+            "credentials": {
+                "accessKeyId": "AKIAXLEKZJVVZRFJDEQ5",
+                "secretAccessKey": ""
+            }
+        }
+    },
+    "io": {
+        "url": "ws://io:3003"
+    },
+    "db": {
+        "host": "database"
+    }
+    
+}

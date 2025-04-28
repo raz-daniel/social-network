@@ -1,0 +1,7 @@
+.LoadingButton i img {
+    height: 16px;
+}
+
+.LoadingButton button:hover {
+cursor: pointer;
+}
