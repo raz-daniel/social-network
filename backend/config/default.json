@@ -19,7 +19,7 @@
         }
     },
     "s3": {
-        "bucket": "il.co.johnbryce.razdaniel",
+        "bucket": "razdaniel-social-network-db-bucket",
         "isLocalstack": true,
         "connection": {
             "region": "us-east-1",

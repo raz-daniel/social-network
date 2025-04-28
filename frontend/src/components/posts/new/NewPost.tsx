@@ -23,7 +23,7 @@ export default function NewPost(): JSX.Element {
 
         try {
 
-            draft.postImage = (draft.postImage as unknown as FileList)[0]
+            draft.imageUrl = (draft.imageUrl as unknown as FileList)[0]
 
             const newPostFromServer = await profile.create(draft)
             reset()
@@ -73,7 +73,7 @@ export default function NewPost(): JSX.Element {
                     }
                 })}></textarea>
 
-                <input type="file" accept='image/png, image/jpeg, image/jpg' {...register('postImage')} onChange={previewImage} />
+                <input type="file" accept='image/png, image/jpeg, image/jpg' {...register('imageUrl')} onChange={previewImage} />
                 {previewImageSrc && <img src={previewImageSrc} />}
 
                 <span className='error'>{formState.errors.body?.message}</span>

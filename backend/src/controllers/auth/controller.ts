@@ -64,7 +64,7 @@ export async function signup(req: Request<{}, {}, {
                 username,
                 password: hashPassword(password),
                 name,
-                postImage: req.imageUrl || null
+                imageUrl: req.imageUrl || null
             })
             console.log(user)
 

@@ -8,7 +8,7 @@ export const newPostValidator = Joi.object({
 export const updatePostValidator = newPostValidator
 
 export const newPostFilesValidator = Joi.object({
-    postImage: Joi.object({
+    imageUrl: Joi.object({
         mimetype: Joi.string().valid('image/png', 'image/jpg', 'image/jpeg')
     }).unknown(true).optional() 
 })

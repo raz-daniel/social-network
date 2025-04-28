@@ -8,16 +8,27 @@ if (!config.get<boolean>('s3.isLocalstack')) delete s3Config.endpoint
 const s3Client = new S3Client(s3Config)
 
 
-    export async function createAppBucketIfNotExists() {
+export async function createAppBucketIfNotExists() {
+    const bucketName = config.get<string>('s3.bucket');
     try {
+        // Try to create the bucket
         await s3Client.send(
             new CreateBucketCommand({
-                Bucket: config.get<string>('s3.bucket')
+                Bucket: bucketName
             })
         )
+        console.log(`----------------------------------------------------------`)
+        console.log(`S3 bucket '${bucketName}' created successfully`);
+        console.log(`----------------------------------------------------------`)
+
     } catch (e) {
-        // ignore
-        console.log('Bucket probably already exist')
+        // Check if it's because the bucket already exists
+        if (e.name === 'BucketAlreadyExists' || e.name === 'BucketAlreadyOwnedByYou') {
+            console.log(`S3 bucket '${bucketName}' already exists`);
+        } else {
+            // Log other types of errors
+            console.error(`Error creating S3 bucket '${bucketName}':`, e);
+        }
     }
 }
 
