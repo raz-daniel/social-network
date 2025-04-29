@@ -1,11 +1,17 @@
-.Comment div:nth-child(0) {
-    font-size: x-small;
-}
-
-.Comment div:nth-child(1) {
-    font-size: x-small;
-}
-
 .Comment {
-    background-color: rgb(249, 207, 207);
-}
+    padding: 12px;
+    margin: 10px 0;
+    background-color: rgba(74, 111, 165, 0.05);
+    border-radius: var(--radius);
+  }
+  
+  .Comment > div:first-child {
+    color: var(--primary-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .Comment > div:last-child {
+    font-size: 0.95rem;
+  }

@@ -1,14 +1,21 @@
-
 .NewComment form {
     display: flex;
     flex-direction: column;
-}
-
-.NewComment textarea {
-    background-color: lightcyan;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    height: 50px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: larger;
-}
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .NewComment textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .NewComment span {
+    color: #e74c3c;
+    font-size: 0.85rem;
+  }
+  
+  .NewComment button {
+    align-self: flex-end;
+    font-size: 0.9rem;
+  }

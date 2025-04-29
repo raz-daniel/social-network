@@ -1,33 +1,48 @@
-.NewPost {
-    border: 1px dashed lightgreen;
-    padding: 4px;
-    margin: 4px;
-}
-
-.NewPost > form {
+.NewPost, .EditPost {
+    background-color: var(--component-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
+  }
+  
+  .NewPost form, .EditPost form {
     display: flex;
     flex-direction: column;
-}
-
-.NewPost .error {
-    color: red;
-}
-
-.NewPost img {
-    width: 100px;
-}
-
-.growth {
-  animation: grow 2s normal;
-}
-
-@keyframes grow {
-    from {
-        width: 50px;
-        height: auto;
-    }
-    to {
-        width: 100%;    /* or whatever final size you want */
-        height: auto;   /* or whatever final size you want */
-    }
-}
+    gap: 10px;
+  }
+  
+  .NewPost textarea, .EditPost textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .NewPost img, .EditPost img {
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 10px 0;
+  }
+  
+  .NewPost input[type="file"], .EditPost input[type="file"] {
+    padding: 8px;
+  }
+  
+  .NewPost button, .EditPost button {
+    align-self: flex-end;
+    padding: 10px 20px;
+  }
+  
+  .NewPost p, .EditPost p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+  }
+  
+  .NewPost p img, .EditPost p img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    animation: spin 1.2s linear infinite;
+  }

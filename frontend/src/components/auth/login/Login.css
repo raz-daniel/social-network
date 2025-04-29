@@ -1,4 +1,38 @@
-.Signup form {
-    display: flex;
-    flex-direction: column;
-}
+.Login {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--component-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .Login fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .Login legend {
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0 10px;
+  }
+  
+  .Login input {
+    margin-bottom: 15px;
+  }
+  
+  .Login button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .Login hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid var(--border-color);
+  }

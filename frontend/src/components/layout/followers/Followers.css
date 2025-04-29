@@ -1,10 +1,23 @@
-.Followers {
-    height: 100%;
-}
-
-.Followers h3 {
-    background-color: green;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-}
+.Following, .Followers {
+    background-color: var(--component-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 15px;
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+  }
+  
+  .Following h3, .Followers h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-light);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .Following, .Followers {
+      position: static;
+    }
+  }

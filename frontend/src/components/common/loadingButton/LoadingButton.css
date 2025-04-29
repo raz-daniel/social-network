@@ -1,7 +1,23 @@
-.LoadingButton i img {
-    height: 16px;
-}
-
-.LoadingButton button:hover {
-cursor: pointer;
-}
+.LoadingButton button {
+    width: 100%;
+  }
+  
+  .LoadingButton p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .LoadingButton p img {
+    width: 20px;
+    height: 20px;
+    animation: spin 1.2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

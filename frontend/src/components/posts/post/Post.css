@@ -1,42 +1,80 @@
 .Post {
+    background-color: var(--component-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  
+  .Post .firstPart {
+    padding: 20px;
+  }
+  
+  .Post .firstPart > div:first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+  }
+  
+  .Post .info {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .Post img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 10px 0;
+  }
+  
+  .Post button {
+    margin-right: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .Post button:first-of-type {
+    background-color: #e74c3c;
+  }
+  
+  .Post button:first-of-type:hover {
+    background-color: #c0392b;
+  }
+  
+  .Post button:nth-of-type(2) {
+    background-color: #3498db;
+  }
+  
+  .Post button:nth-of-type(2):hover {
+    background-color: #2980b9;
+  }
+  
+  .Post > div:nth-of-type(2) {
+    padding: 0 20px 15px;
     display: flex;
-    flex-direction: column;
-    padding: 4px;
-    margin: 4px;    
-}
-
-.Post button {
-    background-color: lightblue;
-    margin: 10px, 20px ;
-    font-size: larger;
-    border-radius: 5px;
-}
-
-.Post button:hover {
-    cursor: pointer;
-}
-
-.Post .info {
-    font-size: x-small;
-}
-
-.Post div:last-child {
-    margin-top: 10px;
-}
-
-.Post span {
-    margin-left: 5px;
-    font-size: larger;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: lightblue;
-}
-
-.Post .firstPart {
-    background-color: rgb(195, 243, 195);
-    margin-bottom: 10px;
-}
-
-.Post img {
-    height: 300px;
-}
+    align-items: center;
+  }
+  
+  .Post span {
+    margin-left: auto;
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  .Post hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 0;
+  }
+  
+  .Post.growth {
+    animation: highlight 2s ease-in-out;
+  }
+  
+  @keyframes highlight {
+    0% { box-shadow: 0 0 0 2px var(--secondary-color); }
+    70% { box-shadow: 0 0 0 2px var(--secondary-color); }
+    100% { box-shadow: var(--shadow); }
+  }

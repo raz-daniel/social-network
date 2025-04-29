@@ -1,7 +1,24 @@
-.FollowingList {
+.FollowersList, .FollowingList {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding: 5px;
-    margin: 5px;
-}
+    flex-direction: column;
+    gap: 12px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  
+  .FollowersList::-webkit-scrollbar, .FollowingList::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .FollowersList::-webkit-scrollbar-thumb, .FollowingList::-webkit-scrollbar-thumb {
+    background-color: var(--primary-light);
+    border-radius: 10px;
+  }
+  
+  .FollowersList p, .FollowingList p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 20px 0;
+  }
