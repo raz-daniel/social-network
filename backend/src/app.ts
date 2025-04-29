@@ -33,8 +33,10 @@ export async function start() {
         await createAppBucketIfNotExists()
 
         app.use(cors({
-            origin: 'http://localhost:5173', // My frontend URL
-            credentials: true // Enable credentials (cookies, authorization headers)
+            origin: process.env.NODE_ENV === 'compose' 
+              ? ['http://localhost:5173', 'http://frontend'] 
+              : 'http://localhost:5173',
+            credentials: true
           }));
 
         //middlewares

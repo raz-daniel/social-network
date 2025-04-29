@@ -1,4 +1,7 @@
 {
+    "app": {
+        "name": "Social Network Docker"
+    },
     "db": {
         "host": "database"
     },

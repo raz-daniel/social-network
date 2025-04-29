@@ -5,10 +5,10 @@ const port = config.get<number>('io.port')
 
 const io = new Server({
     cors: {
-        origin: '*'
+      origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+      credentials: true
     }
-})
-
+  });
 
 io.on('connection', socket => {
     console.log(`got a new connection...`)
